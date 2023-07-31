@@ -1,37 +1,24 @@
-<script>
-    import { InfoBar } from "fluent-svelte";
-</script>
+Guides for Surface Duo.
 
-Welcome to the Fluent Svelte documentation! This page will explain the basic concepts and usage of the library.
+<img alt="Surface Duo Dual Screen Windows" src="https://user-images.githubusercontent.com/3755345/197420866-d3bb0534-c848-4cc2-a242-04dae48b0f6e.png" width="90%" />
 
-### What is this?
+- [Install Windows](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows.md)
+- [Install Windows 10X (Surface Duo 1 Only)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Install10X/SurfaceDuo1.md)
 
-`fluent-svelte` is a [Svelte](http://svelte.dev/) component UI library that emulates the look and feel of [Microsoft's Windows UI Controls](https://github.com/microsoft/microsoft-ui-xaml/) which conform to the Fluent Design System.
+Additional Guides:
 
-<InfoBar
-    severity="caution"
-    title="Before We Begin"
-    message="This is not a 1-to-1 re-implementation of WinUI, but rather a faithful attempt to emulate the look and feel of WinUI on the web. Some controls will have API or behaviorial differences, but the overall look and feel should be very similar."
-/>
+- [Create a Windows ISO with UUPMediaCreator](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
+- [Activate Windows on your Surface Duo](https://support.microsoft.com/en-us/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227)
+- [Uninstall Windows and only keep Android™ (Surface Duo 1 only)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/Uninstall-SurfaceDuo1.md)
+- [Dual Boot between Android™ and Windows 11 without the need of another Computer](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo1.md)
+- [Reinstall Windows (Surface Duo 1 only for now)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
+- [Making Cellular work on Sim Unlocked AT&T Surface Duo 1 devices](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ATTCellular-SurfaceDuo1.md)
 
-### Features
+More:
 
--   [SvelteKit](https://kit.svelte.dev/) and SSR Compatible
--   [TypeScript](https://typescriptlang.org/) and type definitions are supported, but optional.
--   Full RTL support with no additional configuration.
--   All components are accessible according to [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/) standards.
--   Theming support using CSS custom properties.
--   Minimal third-party dependency usage.
--   Reduced motion support.
--   Easy setup. Just install the library, add some base styles, and you're ready to go.
--   Minimal CSS overhead. Styles are included and scoped alongside their respective components, only bundling the CSS you need.
+- [Frequently Asked Questions](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/FAQ.md)
+- [Current Status of the Windows Port](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Status.md)
+- [Restore the Microsoft Store on Windows](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/RestoreMicrosoftStore.md)
+- [Extract boot.img or other partitions](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Other/ExtractingPartitions.md)
 
-### Undocumented Components
-
-This documentation site is still not entirely finished. Many components exported in the library are not yet documented. That progress can be tracked [here](https://github.com/Tropix126/fluent-svelte/issues/13). For now, i've setup a testing page with every component included in the library that is viewable [here](https://fluent-svelte.vercel.app/test). It's source can be viewed [here](https://github.com/Tropix126/fluent-svelte/blob/main/src/routes/test/index.svelte).
-
-Please keep in mind that any undocumented component is _considered to be in the 0.x phase of development_. This means that they could potentially recieve breaking API changes or be heavily updated before being finalized.
-
-### Changelog
-
-See [CHANGELOG.md](https://github.com/Tropix126/fluent-svelte/blob/main/CHANGELOG.md).
+Please join [our Telegram group](https://t.me/duowoa) if you need any assistance!

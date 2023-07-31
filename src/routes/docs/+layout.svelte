@@ -1,26 +1,3 @@
-<script context="module" lang="ts">
-	import type { Load } from "@sveltejs/kit";
-	import { docsPages } from "../../data/docs";
-
-	import { base } from "$app/paths";
-
-	export const prerender = true;
-
-	export const load: Load = async ({ url }) => {
-		const path = url.pathname
-			.replace(/\/$/gi, "") // remove trailing slash
-			.replace("/docs", ""); // remove /docs
-
-		const currentPage = docsPages.find(p => p.path === path);
-
-		return {
-			props: {
-				currentPage
-			}
-		};
-	};
-</script>
-
 <script lang="ts">
 	import { goto } from "$app/navigation";
 
@@ -29,21 +6,23 @@
 
 	import { Button, TextBlock, AutoSuggestBox, ListItem } from "fluent-svelte";
 
-	export let currentPage: DocsMap;
+	import { base } from "$app/paths";
 
 	let article;
 	let searchMatches = [];
 	let searchValue = "";
 	let searchSelection = 0;
 	let searchFlyoutOpen = false;
-	let searchItems = docsPages.map(page => page.name);
+	let searchItems = docsMap.map(page => page.name);
+
+  	export let data;
 
 	function handleKeyDown({ key }: KeyboardEvent) {
 		if (key === "Enter") {
 			searchValue = "";
 			goto(
 				`/docs${
-					docsPages.filter(page => searchMatches.some(match => page.name === match))[
+					docsMap.filter(page => searchMatches.some(match => page.name === match))[
 						searchSelection
 					].path
 				}`
@@ -58,7 +37,7 @@
 	}
 </script>
 
-<Metadata title="DuoWOA - Docs - {currentPage?.name}" description="" />
+<Metadata title="DuoWOA - Docs - {data.props.currentPage?.name}" description="" />
 
 <main class="docs-container">
 	<div class="docs-container-inner">
@@ -78,15 +57,15 @@
 							on:click={() => handleSelection(index)}
 							tabindex={-1}
 							selected={searchSelection === index}
-							href="{base}/docs{docsPages.filter(page =>
+							href="{base}/docs{docsMap.filter(page =>
 								matches.some(match => page.name === match)
 							)[index].path}"
 							{id}
 						>
 							{item}
 							<svelte:fragment slot="icon">
-								{#if docsPages.filter( page => matches.some(match => page.name === match) )[index].name}
-									{@html docsPages.filter(page =>
+								{#if docsMap.filter( page => matches.some(match => page.name === match) )[index].name}
+									{@html docsMap.filter(page =>
 										matches.some(match => page.name === match)
 									)[index].icon}
 								{/if}
@@ -100,9 +79,9 @@
 
 		<article class="markdown-body" bind:this={article}>
 			<header>
-				<h1 id={currentPage?.name}>{currentPage?.name}</h1>
+				<h1 id={data.props.currentPage?.name}>{data.props.currentPage?.name}</h1>
 				<Button
-					href="https://github.com/WOA-Project/DuoWOA/edit/main/src/routes/docs{currentPage?.path ||
+					href="https://github.com/WOA-Project/DuoWOA/edit/main/src/routes/docs{data.props.currentPage?.path ||
 						'/index'}.md"
 					rel="noreferrer noopener"
 					target="_blank"
