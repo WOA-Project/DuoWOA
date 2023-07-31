@@ -296,4 +296,4 @@ Once in Android™, follow these commands:
 adb reboot bootloader
 ```
 
-Once there, you can go back to the [Going to Mass Storage](#going-to-mass-storage) section and follow the instructions in it and after it.
+Once there, you can go back to the [Going to Mass Storage](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/InstallWindows-SurfaceDuo2.md#going-to-mass-storage) section and follow the instructions in it and after it.

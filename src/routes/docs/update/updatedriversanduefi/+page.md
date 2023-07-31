@@ -1,6 +1,6 @@
-⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../InstallWindows/DualBoot-SurfaceDuo1.md)
+⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo1.md)
 
-⚠️ If you are upgrading from a version older than 2301.93, you must also follow this guide: [Migration Guidance for Secure Boot](MigrationGuidanceForSecureBoot.md)
+⚠️ If you are upgrading from a version older than 2301.93, you must also follow this guide: [Migration Guidance for Secure Boot](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Update/MigrationGuidanceForSecureBoot.md)
 
 ⚠️ If you are upgrading from a version older than 2301.93, you must also use version Driver Updater version 1.8.0.0 or higher
 
