@@ -4,6 +4,8 @@
 
 	import { ListItem, TextBlock } from "fluent-svelte";
 
+	import { base } from "$app/paths";
+
 	export let tree = [];
 	export let __depth = 0;
 
@@ -60,7 +62,7 @@
 				on:click
 				type="navigation"
 				selected={`/docs${path}` === $page.url.pathname}
-				href="/docs{path}"
+				href="{base}/docs{path}"
 			>
 				<svelte:fragment slot="icon">
 					{@html icon || ""}

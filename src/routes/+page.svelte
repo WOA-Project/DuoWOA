@@ -9,6 +9,8 @@
 
 	let exampleCount = 0;
 
+	import { base } from "$app/paths";
+
 	const example = `<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
     <span class="token keyword">import</span> <span class="token punctuation">{</span> Button<span class="token punctuation">,</span> TextBlock <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"fluent-svelte"</span><span class="token punctuation">;</span>
     <span class="token keyword">import</span> <span class="token string">"fluent-svelte/theme.css"</span><span class="token punctuation">;</span>
@@ -33,7 +35,7 @@
 		<h1>DuoWOA</h1>
 		<p>Windows on ARM running on the Surface Duo family of devices.</p>
 		<div class="buttons-spacer">
-			<Button variant="accent" href="/docs">Get Started</Button>
+			<Button variant="accent" href="{base}/docs">Get Started</Button>
 			<Button
 				href="https://github.com/WOA-Project/DuoWOA"
 				target="_blank"
@@ -69,7 +71,7 @@
 		<HeroCard>
 			<svelte:fragment slot="header">
 				<TextBlock variant="bodyStrong">2. Build</TextBlock>
-				<IconButton href="/docs">
+				<IconButton href="{base}/docs">
 					{@html Book}
 				</IconButton>
 			</svelte:fragment>

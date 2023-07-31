@@ -2,6 +2,8 @@
     import { InfoBar, InfoBadge, Button } from "fluent-svelte";
     import { Showcase, APIDocs } from "../../../../lib";
 
+	import { base } from "$app/paths";
+
     import data from "fluent-svelte/InfoBar/InfoBar.svelte?raw&sveld";
 </script>
 
@@ -67,7 +69,7 @@ InfoBars can take in a `severity` prop, which represent the type of information 
 
 ### Action Buttons
 
-An action button can be passed in using the `action` slot. It's recommended that you use the [Button](/docs/components/button) component for this, but any HTML element is valid.
+An action button can be passed in using the `action` slot. It's recommended that you use the [Button]({base}/docs/components/button) component for this, but any HTML element is valid.
 
 ```svelte example hideScript
 <script>

@@ -7,10 +7,12 @@
 	import News from "@fluentui/svg-icons/icons/news_24_regular.svg?raw";
 	import Wrench from "@fluentui/svg-icons/icons/wrench_24_regular.svg?raw";
 
+	import { base } from "$app/paths";
+
 	let items = [
 		{
 			name: "Docs",
-			href: "/docs",
+			href: base + "/docs",
 			icon: News
 		}
 	];

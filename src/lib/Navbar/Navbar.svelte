@@ -2,6 +2,8 @@
 	import { page } from "$app/stores";
 	import { TextBlock } from "fluent-svelte";
 
+	import { base } from "$app/paths";
+
 	interface Item {
 		href: string;
 		name: string;
@@ -13,8 +15,8 @@
 
 <header class="navbar">
 	<div class="navbar-inner">
-		<a class="logo" href="/">
-			<img src="/logo.svg" width="32" height="32" alt="DuoWOA logo" />
+		<a class="logo" href="{base}/">
+			<img src="{base}/logo.svg" width="32" height="32" alt="DuoWOA logo" />
 			DuoWOA <TextBlock variant="caption">DF</TextBlock>
 		</a>
 		<nav>

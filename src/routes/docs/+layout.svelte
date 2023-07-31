@@ -2,6 +2,8 @@
 	import type { Load } from "@sveltejs/kit";
 	import { docsPages } from "../../data/docs";
 
+	import { base } from "$app/paths";
+
 	export const prerender = true;
 
 	export const load: Load = async ({ url }) => {
@@ -56,7 +58,7 @@
 	}
 </script>
 
-<Metadata title="Fluent Svelte - Docs - {currentPage?.name}" description="" />
+<Metadata title="DuoWOA - Docs - {currentPage?.name}" description="" />
 
 <main class="docs-container">
 	<div class="docs-container-inner">
@@ -76,7 +78,7 @@
 							on:click={() => handleSelection(index)}
 							tabindex={-1}
 							selected={searchSelection === index}
-							href="/docs{docsPages.filter(page =>
+							href="{base}/docs{docsPages.filter(page =>
 								matches.some(match => page.name === match)
 							)[index].path}"
 							{id}
