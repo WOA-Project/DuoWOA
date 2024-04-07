@@ -21,8 +21,8 @@
 		<link rel="modulepreload" href="../../_app/immutable/chunks/stores.ea9b0681.js">
 		<link rel="modulepreload" href="../../_app/immutable/nodes/2.d76e8187.js">
 		<link rel="modulepreload" href="../../_app/immutable/chunks/Metadata.65a7474e.js">
-		<link rel="modulepreload" href="../../_app/immutable/nodes/33.fbd7782d.js">
-		<link rel="modulepreload" href="../../_app/immutable/chunks/InfoBar.2450fd95.js"><title>DuoWOA - Docs - Updating Drivers and UEFI firmware</title><!-- HEAD_svelte-sg3mhn_START --><meta content="DuoWOA - Docs - Updating Drivers and UEFI firmware" name="og:title"><meta content="DuoWOA - Docs - Updating Drivers and UEFI firmware" name="twitter:title"><meta content="" name="description"><meta content="" name="og:description"><meta content="" name="twitter:description"><!-- HEAD_svelte-sg3mhn_END -->
+		<link rel="modulepreload" href="../../_app/immutable/nodes/7.d6cca00a.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/InfoBar.2450fd95.js"><title>DuoWOA - Docs - Switch from WCOS to Desktop</title><!-- HEAD_svelte-sg3mhn_START --><meta content="DuoWOA - Docs - Switch from WCOS to Desktop" name="og:title"><meta content="DuoWOA - Docs - Switch from WCOS to Desktop" name="twitter:title"><meta content="" name="description"><meta content="" name="og:description"><meta content="" name="twitter:description"><!-- HEAD_svelte-sg3mhn_END -->
 	</head>
 	<body>
 		<div id="svelte">
@@ -50,7 +50,7 @@
 <main class="docs-container"><div class="docs-container-inner"><aside><div class="docs-search">
 <div class="text-box-container auto-suggest-box   svelte-1ut70sw">
 	
-	<input type="search" class="text-box svelte-1ut70sw" placeholder="Search Docs" aria-autocomplete="list" aria-activedescendant="" aria-expanded="false" aria-controls="fds-auto-suggest-flyout-n52e1f5a81712e18eb918d0d0" value="">
+	<input type="search" class="text-box svelte-1ut70sw" placeholder="Search Docs" aria-autocomplete="list" aria-activedescendant="" aria-expanded="false" aria-controls="fds-auto-suggest-flyout-a5c5e7a6336d4f18eb918d002" value="">
 	<div class="text-box-underline svelte-1ut70sw"></div>
 	<div class="text-box-buttons svelte-1ut70sw">
 			<button class="text-box-button  svelte-159a5xt" type="button" aria-label="Search"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M5.00038 1C2.79103 1 1 2.7909 1 5.00008C1 7.20927 2.79103 9.00017 5.00038 9.00017C5.92463 9.00017 6.77568 8.68675 7.45302 8.1604L10.1464 10.8536C10.3416 11.0488 10.6583 11.0488 10.8535 10.8536C11.0488 10.6583 11.0488 10.3417 10.8535 10.1464L8.16028 7.45337C8.68705 6.77595 9.00075 5.92465 9.00075 5.00008C9.00075 2.7909 7.20972 1 5.00038 1ZM2.00009 5.00008C2.00009 3.34319 3.34337 2.00002 5.00038 2.00002C6.65739 2.00002 8.00066 3.34319 8.00066 5.00008C8.00066 6.65697 6.65739 8.00015 5.00038 8.00015C3.34337 8.00015 2.00009 6.65697 2.00009 5.00008Z" fill="currentColor"></path></svg>
@@ -231,28 +231,20 @@
 </div>
 </div></aside>
 
-		<article class="markdown-body"><header><h1 id="Updating Drivers and UEFI firmware">Updating Drivers and UEFI firmware</h1>
+		<article class="markdown-body"><header><h1 id="Switch from WCOS to Desktop">Switch from WCOS to Desktop</h1>
 				
-<a role="button" href="https://github.com/WOA-Project/DuoWOA/edit/main/src/routes/docs/update/updatedriversanduefi.md" class="button style-hyperlink   svelte-nqc07q" rel="noreferrer noopener" target="_blank">Edit This Page
+<a role="button" href="https://github.com/WOA-Project/DuoWOA/edit/main/src/routes/docs/install10x/switchfromwcostodesktop.md" class="button style-hyperlink   svelte-nqc07q" rel="noreferrer noopener" target="_blank">Edit This Page
 </a></header>
-			<h1 id="filestools-needed-">Files/Tools needed 📃</h1>
-<ul><li><a href="https://developer.android.com/studio/releases/platform-tools" rel="nofollow">Platform Tools from Google (ADB and Fastboot)</a></li>
-<li>Mass Storage Shell Script: <a href="https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/installwindows/Files/msc.tar" rel="nofollow">msc.tar</a></li>
-<li>The driver set: <a href="https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest" rel="nofollow">SurfaceDuo-Drivers-2XXX.XX-Full.zip</a></li></ul>
-<p>Note: Here’s a table of what to download if you’re a bit lost:</p>
-<table><thead><tr><th>File Name</th>
-<th>Target Device</th></tr></thead>
-<tbody><tr><td>SurfaceDuo-Drivers-XXXX.XX-Desktop-Epsilon.zip</td>
-<td>Surface Duo (1st Gen)</td></tr>
-<tr><td>SurfaceDuo-Drivers-XXXX.XX-Desktop-Zeta.zip</td>
-<td>Surface Duo 2</td></tr></tbody></table>
-<ul><li>A Windows PC</li></ul>
+			<p>This guide will help you switch back to Windows Desktop after having installed and used Windows Core OS on your device without needing to follow the uninstall procedure.</p>
+<h1 id="filestools-needed-">Files/Tools Needed 📃</h1>
+<ul><li>Parted: <a href="https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/installwindows/Files/parted" rel="nofollow">parted</a></li>
+<li><a href="https://developer.android.com/studio/releases/platform-tools" rel="nofollow">Platform Tools from Google (ADB and Fastboot)</a></li>
+<li>A Windows PC</li></ul>
 <h2 id="for-surface-duo-1st-gen">For Surface Duo (1st Gen)</h2>
-<ul><li>TWRP image for Surface Duo (1st Gen): <a href="https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/installwindows/Files/surfaceduo1-twrp.img" rel="nofollow">surfaceduo1-twrp.img</a></li>
-<li>Windows UEFI for Surface Duo (1st Gen): <a href="https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest" rel="nofollow">Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img</a></li></ul>
+<ul><li>TWRP image for Surface Duo (1st Gen): <a href="https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/installwindows/Files/surfaceduo1-twrp.img" rel="nofollow">surfaceduo1-twrp.img</a></li></ul>
 <h2 id="for-surface-duo-2">For Surface Duo 2</h2>
 <ul><li>TWRP image for Surface Duo 2: <a href="https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/installwindows/Files/surfaceduo2-twrp.img" rel="nofollow">surfaceduo2-twrp.img</a></li>
-<li>Windows UEFI for Surface Duo 2: <a href="https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest" rel="nofollow">Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img</a></li></ul>
+<li>File System Support Package for TWRP image: <a href="https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/installwindows/Files/surfaceduo2-twrp-fssupport.tar" rel="nofollow">surfaceduo2-twrp-fssupport.tar</a></li></ul>
 
 <div class="info-bar severity-caution  svelte-y0ncn6" role="alert"><div class="info-bar-icon svelte-y0ncn6">
 				
@@ -263,50 +255,25 @@
 			</div>
 		<div class="info-bar-content svelte-y0ncn6"><h5 class="svelte-y0ncn6">Warnings</h5>
 			<p class="svelte-y0ncn6">
-					<li>- ⚠️ If you use a Dual Boot Image preflashed onto the device, you will also need to follow this guide again: [Dual Boot](../installwindows/DualBoot-SurfaceDuo)</li>
-  <li>- ⚠️ If you are upgrading from a version older than 2301.93, you must reinstall using this guide:</li>
-  <li>- [Reinstall Windows (Surface Duo (1st Gen))](https://woa-project.github.io/DuoWOA/docs/installwindows/Reinstallwindows-surfaceduo1)</li>
-  <li>- [Reinstall Windows (Surface Duo 2)](https://woa-project.github.io/DuoWOA/docs/installwindows/Reinstallwindows-surfaceduo2)</li>
-  <li>- ⚠️ If you are upgrading from a version older than 2301.93, you must also use version Driver Updater version 1.8.0.0 or higher</li>
+					<li>- Don&#39;t create partitions from Mass Storage Mode on Windows (because ABL will break with blank/spaces in names), your phone may be irrecoverable otherwise</li>
+  <li>- Read the entire guide before starting. Make sure you understand all of what you&#39;re going to do!</li>
   <li>- If you see a warning and/or error during the process, it is not normal. Contact us on telegram if you see anything odd, but do not continue or proceed on your own, you will break things further.</li>
+  <li>- Don&#39;t rerun the commands if you interrupt the process. You may break your partition table.</li>
   <li>- Do not run all commands at once.</li>
+  <li>- Do not commit *any* typo with *any* commands.</li>
+  <li>- Be familiar with command line interfaces.</li>
   <li>- When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone or an Asus phone and for touch to not work.</li></p>
 			</div>
 		<button class="info-bar-close-button svelte-y0ncn6" type="button" aria-label="Close"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 1024 1024" class="svelte-y0ncn6"><path fill="currentColor" d="M512,584.5L87.5,1009C77.5,1019 65.5,1024 51.5,1024C36.8333,1024 24.5833,1019.08 14.75,1009.25C4.91667,999.417 0,987.167 0,972.5C0,958.5 5,946.5 15,936.5L439.5,512L15,87.5C5,77.5 0,65.3334 0,51C0,44 1.33333,37.3334 4,31C6.66667,24.6667 10.3333,19.25 15,14.75C19.6667,10.25 25.1667,6.66669 31.5,4C37.8333,1.33337 44.5,0 51.5,0C65.5,0 77.5,5 87.5,15L512,439.5L936.5,15C946.5,5 958.667,0 973,0C980,0 986.583,1.33337 992.75,4C998.917,6.66669 1004.33,10.3334 1009,15C1013.67,19.6667 1017.33,25.0834 1020,31.25C1022.67,37.4167 1024,44 1024,51C1024,65.3334 1019,77.5 1009,87.5L584.5,512L1009,936.5C1019,946.5 1024,958.5 1024,972.5C1024,979.5 1022.67,986.167 1020,992.5C1017.33,998.833 1013.75,1004.33 1009.25,1009C1004.75,1013.67 999.333,1017.33 993,1020C986.667,1022.67 980,1024 973,1024C958.667,1024 946.5,1019 936.5,1009Z"></path></svg></button></div>
 <h1 id="steps-️">Steps 🛠️</h1>
-<h1 id="going-to-the-bootloader-menu">Going to the Bootloader menu</h1>
-<ul><li><p>Start by turning on your Surface Duo into Android™, and unlock it</p></li>
-<li><p>Open a command prompt on your PC</p></li></ul>
-<p><img src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/ab36aa10-6617-4680-ac06-bb58b7a0c3bb" alt="image"></p>
-<ul><li>Go to the folder where you extracted the Google Android™ Platform tools using the CD command and the path of the folder, like so:</li></ul>
-<p><img src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24760f21-dc1b-48e6-9ae3-0aeb16f8953c" alt="image"></p>
-<ul><li>Run the following command to ensure your phone is detected by your PC</li></ul>
-<pre class="language-batch"><!-- HTML_TAG_START --><code class="language-batch"><span class="token command"><span class="token keyword">adb</span> devices</span></code><!-- HTML_TAG_END --></pre>
-
-<div class="info-bar severity-caution  svelte-y0ncn6" role="alert"><div class="info-bar-icon svelte-y0ncn6">
-				
-<span class="info-badge severity-caution  svelte-1teilhs">
-		<svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="406 86 213 875" class="svelte-1teilhs"><path fill="currentColor" d="M426.5,512L426.5,170.5C426.5,158.833 428.75,147.833 433.25,137.5C437.75,127.167 443.917,118.167 451.75,110.5C459.583,102.833 468.667,96.75 479,92.25C489.333,87.75 500.333,85.5 512,85.5C523.667,85.5 534.667,87.75 545,92.25C555.333,96.75 564.417,102.833 572.25,110.5C580.083,118.167 586.25,127.167 590.75,137.5C595.25,147.833 597.5,158.833 597.5,170.5L597.5,512C597.5,523.667 595.25,534.667 590.75,545C586.25,555.333 580.083,564.417 572.25,572.25C564.417,580.083 555.333,586.25 545,590.75C534.667,595.25 523.667,597.5 512,597.5C500.333,597.5 489.333,595.25 479,590.75C468.667,586.25 459.583,580.083 451.75,572.25C443.917,564.417 437.75,555.333 433.25,545C428.75,534.667 426.5,523.667 426.5,512ZM405.5,853.5C405.5,838.833 408.333,825 414,812C419.667,799 427.333,787.667 437,778C446.667,768.333 457.917,760.667 470.75,755C483.583,749.333 497.333,746.5 512,746.5C526.667,746.5 540.417,749.333 553.25,755C566.083,760.667 577.333,768.333 587,778C596.667,787.667 604.333,799 610,812C615.667,825 618.5,838.833 618.5,853.5C618.5,868.167 615.667,881.917 610,894.75C604.333,907.583 596.667,918.833 587,928.5C577.333,938.167 566,945.833 553,951.5C540,957.167 526.333,960 512,960C497.333,960 483.583,957.167 470.75,951.5C457.917,945.833 446.667,938.167 437,928.5C427.333,918.833 419.667,907.583 414,894.75C408.333,881.917 405.5,868.167 405.5,853.5Z"></path></svg>
-	
-</span>
-			</div>
-		<div class="info-bar-content svelte-y0ncn6"><h5 class="svelte-y0ncn6">Tip</h5>
-			<p class="svelte-y0ncn6">
-					<li>If you see no device listed, check for updates in Windows Update, you likely have a Driver Update pending so the phone is recognized, when you&#39;re good to go, you should see the following image below this notice.</li>
-  <li>It is possible certain computers see no update offered (like Windows ARM64 Computers or other older machines with no functional Windows Update). If this is your case, we also provide Drivers for you to download</li>
-  <li>at the following location, you will have to install them using Device Manager on your PC. [Download USB Drivers](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/installwindows/Files/USB-Drivers.zip)</li></p>
-			</div>
-		<button class="info-bar-close-button svelte-y0ncn6" type="button" aria-label="Close"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 1024 1024" class="svelte-y0ncn6"><path fill="currentColor" d="M512,584.5L87.5,1009C77.5,1019 65.5,1024 51.5,1024C36.8333,1024 24.5833,1019.08 14.75,1009.25C4.91667,999.417 0,987.167 0,972.5C0,958.5 5,946.5 15,936.5L439.5,512L15,87.5C5,77.5 0,65.3334 0,51C0,44 1.33333,37.3334 4,31C6.66667,24.6667 10.3333,19.25 15,14.75C19.6667,10.25 25.1667,6.66669 31.5,4C37.8333,1.33337 44.5,0 51.5,0C65.5,0 77.5,5 87.5,15L512,439.5L936.5,15C946.5,5 958.667,0 973,0C980,0 986.583,1.33337 992.75,4C998.917,6.66669 1004.33,10.3334 1009,15C1013.67,19.6667 1017.33,25.0834 1020,31.25C1022.67,37.4167 1024,44 1024,51C1024,65.3334 1019,77.5 1009,87.5L584.5,512L1009,936.5C1019,946.5 1024,958.5 1024,972.5C1024,979.5 1022.67,986.167 1020,992.5C1017.33,998.833 1013.75,1004.33 1009.25,1009C1004.75,1013.67 999.333,1017.33 993,1020C986.667,1022.67 980,1024 973,1024C958.667,1024 946.5,1019 936.5,1009Z"></path></svg></button></div>
-<p><img src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/b3a8b091-1b34-47e4-bd6e-c286ee808f14" alt="image"></p>
-<ul><li>Run the following command now</li></ul>
+<h1 id="making-the-partitions">Making the partitions</h1>
+<ul><li>Reboot into the Bootloader mode by running this command while inside Android™:</li></ul>
 <pre class="language-batch"><!-- HTML_TAG_START --><code class="language-batch"><span class="token command"><span class="token keyword">adb</span> reboot bootloader</span></code><!-- HTML_TAG_END --></pre>
-<p>You will be rebooted to Surface Duo’s bootloader.</p>
 <p><img src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486" alt="Surface Duo in Bootloader mode">
 <em>Image of what you should see right now: Surface Duo in Bootloader mode</em></p>
-<hr>
-<h1 id="booting-to-twrp">Booting to TWRP</h1>
+<h1 id="making-the-partitions-1">Making the partitions</h1>
 <ul><li>Start by booting TWRP:</li></ul>
-<p>For Surface Duo (1st Gen):</p>
+<h2 id="for-surface-duo-1st-gen-1">For Surface Duo (1st Gen)</h2>
 <ul><li>Plug your phone to your PC, open a command prompt and start by typing the following text, but do not press enter just yet</li></ul>
 <pre class="language-batch"><!-- HTML_TAG_START --><code class="language-batch"><span class="token command"><span class="token keyword">fastboot</span> boot</span></code><!-- HTML_TAG_END --></pre>
 <p><img src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47" alt="image"></p>
@@ -317,7 +284,7 @@
 <ul><li>Now you can press enter</li></ul>
 <p><img src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/2e27f24c-5b12-476d-99d8-f11de5baa807" alt="image"></p>
 <p>You will now boot to TWRP. Reminder that touch doesn’t work on TWRP for now, so you’ll have to work through your PC.</p>
-<p>For Surface Duo 2:</p>
+<h2 id="for-surface-duo-2-1">For Surface Duo 2</h2>
 <ul><li>Plug your phone to your PC, open a command prompt and start by typing the following text, but do not press enter just yet</li></ul>
 <pre class="language-batch"><!-- HTML_TAG_START --><code class="language-batch"><span class="token command"><span class="token keyword">fastboot</span> boot</span></code><!-- HTML_TAG_END --></pre>
 <p><img src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47" alt="image"></p>
@@ -328,14 +295,14 @@
 <ul><li>Now you can press enter</li></ul>
 <p><img src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/2e27f24c-5b12-476d-99d8-f11de5baa807" alt="image"></p>
 <p>You will now boot to TWRP. Reminder that touch doesn’t work on TWRP for now, so you’ll have to work through your PC.</p>
-<hr>
-<h2 id="switching-to-mass-storage-mode">Switching to Mass Storage Mode</h2>
 <ul><li>Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal. Keep the phone plugged to your PC and do these commands ONE BY ONE WITH NO TYPO!:</li></ul>
 <pre class="language-batch"><!-- HTML_TAG_START --><code class="language-batch"><span class="token command"><span class="token keyword">adb</span> shell <span class="token string">"setenforce 0"</span></span>
-<span class="token command"><span class="token keyword">adb</span> push &lt;path to downloaded msc.tar> /sdcard/</span>
-<span class="token command"><span class="token keyword">adb</span> shell <span class="token string">"tar -xf /sdcard/msc.tar -C /sdcard --no-same-owner"</span></span>
-<span class="token command"><span class="token keyword">adb</span> shell <span class="token string">"sh /sdcard/msc.sh"</span></span></code><!-- HTML_TAG_END --></pre>
-<h1 id="updating-drivers">Updating Drivers</h1>
+<span class="token command"><span class="token keyword">adb</span> push &lt;path to parted that was downloaded earlier> /sdcard/</span>
+<span class="token command"><span class="token keyword">adb</span> shell <span class="token string">"mv /sdcard/parted /sbin/parted &amp;&amp; chmod 755 /sbin/parted"</span></span>
+<span class="token command"><span class="token keyword">adb</span> shell</span></code><!-- HTML_TAG_END --></pre>
+<ul><li>Now we are issuing commands directly from inside Surface Duo using the PC.</li></ul>
+<h2 id="dangerous-section">Dangerous section</h2>
+<p>Anything in this section is DANGEROUS and may PERMANENTLY damage your phone if you do any step wrong. Please carefully read all warnings and all instructions and make NO MISTAKE. Do not proceed if late at night or tired or drunk (yes, we’re serious).</p>
 
 <div class="info-bar severity-caution  svelte-y0ncn6" role="alert"><div class="info-bar-icon svelte-y0ncn6">
 				
@@ -346,45 +313,48 @@
 			</div>
 		<div class="info-bar-content svelte-y0ncn6"><h5 class="svelte-y0ncn6">Warnings</h5>
 			<p class="svelte-y0ncn6">
-					<li>From now on we will assume X: is the Win partition for all commands. Replace them correctly with what you previously picked or you will lose data on your PC.</li></p>
+					<li>!!!! Warning reminder !!!!</li>
+  <li>⚠️ Do not run all commands at once, instead run them one by one</li>
+  <li>⚠️ DO NOT MAKE ANY TYPO! Parted is a *very* delicate tool, you MAY BREAK YOUR DEVICE PERMANENTLY WITH BELOW COMMANDS IF YOU DO THEM WRONG!</li>
+  <li>⚠️ If you see any warning, or error, it is not normal. Contact us on telegram</li>
+  <li>⚠️ You can kill your phone permanently if you do below&#39;s steps wrong, for real.</li>
+  <li>⚠️ DO NOT, UNDER ANY CIRCUMSTANCES, RERUN, ANY, OF BELOW&#39;S COMMANDS, EVEN IF A SINGLE ONE. DOING THIS WILL PERMANENTLY CAUSE HAVOC TO YOUR DEVICE. DO. NOT. RERUN. ANY. OF. THESE. COMMANDS. AFTER. RUNNING. ANY. SINGLE. ONE. OF. THEM. ONCE. You can rerun them __only__ if you completed the installation, and followed the uninstall guide, never if you messed up anything, or didn&#39;t proceed with the uninstall guide yet.</li>
+  <li>⚠️ If you end up messing up, or &quot;forgetting&quot; to run a command, DO NOT RERUN ANYTHING. CONTACT US IMMEDIATELY ON TELEGRAM. EXPLAIN WHAT YOU DID. POST A SCREENSHOT OF THE &quot;print&quot; PARTED COMMAND OUTPUT DONE LAST TO KNOW THE CURRENT STATUS AND NOT THE ONE PRIOR TO 20 OTHER COMMANDS.</li></p>
 			</div>
 		<button class="info-bar-close-button svelte-y0ncn6" type="button" aria-label="Close"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 1024 1024" class="svelte-y0ncn6"><path fill="currentColor" d="M512,584.5L87.5,1009C77.5,1019 65.5,1024 51.5,1024C36.8333,1024 24.5833,1019.08 14.75,1009.25C4.91667,999.417 0,987.167 0,972.5C0,958.5 5,946.5 15,936.5L439.5,512L15,87.5C5,77.5 0,65.3334 0,51C0,44 1.33333,37.3334 4,31C6.66667,24.6667 10.3333,19.25 15,14.75C19.6667,10.25 25.1667,6.66669 31.5,4C37.8333,1.33337 44.5,0 51.5,0C65.5,0 77.5,5 87.5,15L512,439.5L936.5,15C946.5,5 958.667,0 973,0C980,0 986.583,1.33337 992.75,4C998.917,6.66669 1004.33,10.3334 1009,15C1013.67,19.6667 1017.33,25.0834 1020,31.25C1022.67,37.4167 1024,44 1024,51C1024,65.3334 1019,77.5 1009,87.5L584.5,512L1009,936.5C1019,946.5 1024,958.5 1024,972.5C1024,979.5 1022.67,986.167 1020,992.5C1017.33,998.833 1013.75,1004.33 1009.25,1009C1004.75,1013.67 999.333,1017.33 993,1020C986.667,1022.67 980,1024 973,1024C958.667,1024 946.5,1019 936.5,1009Z"></path></svg></button></div>
-<ul><li>Download the latest driver package from <a href="https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest" rel="nofollow">https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest</a></li></ul>
-<p>Note: Here’s a table of what to download if you’re a bit lost:</p>
-<table><thead><tr><th>File Name</th>
-<th>Target Device</th></tr></thead>
-<tbody><tr><td>SurfaceDuo-Drivers-XXXX.XX-Desktop-Epsilon.zip</td>
-<td>Surface Duo (1st Gen)</td></tr>
-<tr><td>SurfaceDuo-Drivers-XXXX.XX-Desktop-Zeta.zip</td>
-<td>Surface Duo 2</td></tr></tbody></table>
-<ul><li><p>Extract the driver package, and go to the folder where you extracted it.</p></li>
-<li><p>Double click the <code>OfflineUpdater.cmd</code> file.</p></li>
-<li><p>Accept the User Account Control warning when prompted</p></li>
-<li><p>Enter the drive letter of the connected phone in mass storage, as we previously mentioned, for us it’s currently <code>X:</code>, but it may very well be different for you. In our example, we enter <code>X:</code> and then press enter.</p></li>
-<li><p>The process may take a while, once it is done, you will be prompted to press any key, press enter when that’s the case.</p></li></ul>
-<p>Congratulations, you just updated your drivers!</p>
-<ul><li>You can now reboot your phone using:</li></ul>
-<pre class="language-batch"><!-- HTML_TAG_START --><code class="language-batch"><span class="token command"><span class="token keyword">adb</span> reboot bootloader</span></code><!-- HTML_TAG_END --></pre>
-<p>You will be back into Surface Duo’s bootloader.</p>
-<p><img src="https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486" alt="Surface Duo in Bootloader mode">
-<em>Image of what you should see right now: Surface Duo in Bootloader mode</em></p>
-<h1 id="updating-uefi">Updating UEFI</h1>
-<p>Simply use the latest UEFI image</p>
-<ul><li>Assuming you are in Surface Duo’s bootloader, run the following command to boot into Windows:</li></ul>
-<pre class="language-batch"><!-- HTML_TAG_START --><code class="language-batch"><span class="token command"><span class="token keyword">fastboot</span> boot uefi.img</span></code><!-- HTML_TAG_END --></pre>
-
-<div class="info-bar severity-caution  svelte-y0ncn6" role="alert"><div class="info-bar-icon svelte-y0ncn6">
-				
-<span class="info-badge severity-caution  svelte-1teilhs">
-		<svg aria-hidden xmlns="http://www.w3.org/2000/svg" viewBox="406 86 213 875" class="svelte-1teilhs"><path fill="currentColor" d="M426.5,512L426.5,170.5C426.5,158.833 428.75,147.833 433.25,137.5C437.75,127.167 443.917,118.167 451.75,110.5C459.583,102.833 468.667,96.75 479,92.25C489.333,87.75 500.333,85.5 512,85.5C523.667,85.5 534.667,87.75 545,92.25C555.333,96.75 564.417,102.833 572.25,110.5C580.083,118.167 586.25,127.167 590.75,137.5C595.25,147.833 597.5,158.833 597.5,170.5L597.5,512C597.5,523.667 595.25,534.667 590.75,545C586.25,555.333 580.083,564.417 572.25,572.25C564.417,580.083 555.333,586.25 545,590.75C534.667,595.25 523.667,597.5 512,597.5C500.333,597.5 489.333,595.25 479,590.75C468.667,586.25 459.583,580.083 451.75,572.25C443.917,564.417 437.75,555.333 433.25,545C428.75,534.667 426.5,523.667 426.5,512ZM405.5,853.5C405.5,838.833 408.333,825 414,812C419.667,799 427.333,787.667 437,778C446.667,768.333 457.917,760.667 470.75,755C483.583,749.333 497.333,746.5 512,746.5C526.667,746.5 540.417,749.333 553.25,755C566.083,760.667 577.333,768.333 587,778C596.667,787.667 604.333,799 610,812C615.667,825 618.5,838.833 618.5,853.5C618.5,868.167 615.667,881.917 610,894.75C604.333,907.583 596.667,918.833 587,928.5C577.333,938.167 566,945.833 553,951.5C540,957.167 526.333,960 512,960C497.333,960 483.583,957.167 470.75,951.5C457.917,945.833 446.667,938.167 437,928.5C427.333,918.833 419.667,907.583 414,894.75C408.333,881.917 405.5,868.167 405.5,853.5Z"></path></svg>
-	
-</span>
-			</div>
-		<div class="info-bar-content svelte-y0ncn6"><h5 class="svelte-y0ncn6">Tip</h5>
-			<p class="svelte-y0ncn6">
-					<li>You can setup dual boot again if you need it by using the latest UEFI files and following the dual boot guide again (in case of a manual file creation), or by flashing one of the prebuilt dual boot images (see UEFI release notes for more details on both).</li></p>
-			</div>
-		<button class="info-bar-close-button svelte-y0ncn6" type="button" aria-label="Close"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 1024 1024" class="svelte-y0ncn6"><path fill="currentColor" d="M512,584.5L87.5,1009C77.5,1019 65.5,1024 51.5,1024C36.8333,1024 24.5833,1019.08 14.75,1009.25C4.91667,999.417 0,987.167 0,972.5C0,958.5 5,946.5 15,936.5L439.5,512L15,87.5C5,77.5 0,65.3334 0,51C0,44 1.33333,37.3334 4,31C6.66667,24.6667 10.3333,19.25 15,14.75C19.6667,10.25 25.1667,6.66669 31.5,4C37.8333,1.33337 44.5,0 51.5,0C65.5,0 77.5,5 87.5,15L512,439.5L936.5,15C946.5,5 958.667,0 973,0C980,0 986.583,1.33337 992.75,4C998.917,6.66669 1004.33,10.3334 1009,15C1013.67,19.6667 1017.33,25.0834 1020,31.25C1022.67,37.4167 1024,44 1024,51C1024,65.3334 1019,77.5 1009,87.5L584.5,512L1009,936.5C1019,946.5 1024,958.5 1024,972.5C1024,979.5 1022.67,986.167 1020,992.5C1017.33,998.833 1013.75,1004.33 1009.25,1009C1004.75,1013.67 999.333,1017.33 993,1020C986.667,1022.67 980,1024 973,1024C958.667,1024 946.5,1019 936.5,1009Z"></path></svg></button></div>
+<ul><li>Let’s run parted and make the partition type changes (ONE BY ONE WITH NO TYPO!):</li></ul>
+<h2 id="for-surface-duo-1st-gen-2">For Surface Duo (1st Gen)</h2>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash">setenforce <span class="token number">0</span>
+<span class="token function">parted</span> /dev/block/sda
+<span class="token builtin class-name">set</span> <span class="token number">7</span> msftdata on
+quit</code><!-- HTML_TAG_END --></pre>
+<h2 id="for-surface-duo-2-2">For Surface Duo 2</h2>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash">setenforce <span class="token number">0</span>
+<span class="token function">parted</span> /dev/block/sda
+<span class="token builtin class-name">set</span> <span class="token number">9</span> msftdata on
+quit</code><!-- HTML_TAG_END --></pre>
+<p>This will get you out of parted.</p>
+<p>Now let’s make these partitions actually usable:</p>
+<h2 id="for-surface-duo-1st-gen-3">For Surface Duo (1st Gen)</h2>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash">setenforce <span class="token number">0</span>
+mkfs.fat <span class="token parameter variable">-F32</span> <span class="token parameter variable">-s1</span> /dev/block/sda6
+mkfs.ntfs <span class="token parameter variable">-f</span> /dev/block/sda7
+<span class="token builtin class-name">exit</span></code><!-- HTML_TAG_END --></pre>
+<h2 id="for-surface-duo-2-3">For Surface Duo 2</h2>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash">adb shell <span class="token string">"setenforce 0"</span>
+adb push <span class="token operator">&lt;</span>path to downloaded surfaceduo2-twrp-fssupport.tar<span class="token operator">></span> /sdcard/
+adb shell <span class="token string">"tar -xf /sdcard/surfaceduo2-twrp-fssupport.tar -C /sdcard/fssupport --no-same-owner"</span>
+adb shell <span class="token string">"chmod 755 /sdcard/fssupport/*"</span>
+adb shell <span class="token string">"mv /sdcard/fssupport/* /sbin/"</span>
+mkfs.fat <span class="token parameter variable">-F32</span> <span class="token parameter variable">-s1</span> /dev/block/sda8
+mkfs.ntfs <span class="token parameter variable">-f</span> /dev/block/sda9
+<span class="token builtin class-name">exit</span></code><!-- HTML_TAG_END --></pre>
+<h2 id="end-of-the-dangerous-section">End of the Dangerous section</h2>
+<h1 id="rebooting-into-android">Rebooting into Android</h1>
+<p>Now, reboot into Android again:</p>
+<pre class="language-batch"><!-- HTML_TAG_START --><code class="language-batch"><span class="token command"><span class="token keyword">adb</span> reboot</span></code><!-- HTML_TAG_END --></pre>
+<p>We’re done!</p>
+<p>Now proceed to follow the Reinstall Windows Desktop guide for your device.</p>
 <hr>
 <p><em><strong>© 2020-2024 The Duo WOA Authors</strong></em></p>
 <p><em>Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Surface Duo, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Android is a registered trademark of Google LLC. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface.</em></p>
@@ -417,7 +387,7 @@
 						import("../../_app/immutable/entry/app.cfc9a8ad.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 2, 33],
+							node_ids: [0, 2, 7],
 							data,
 							form: null,
 							error: null
