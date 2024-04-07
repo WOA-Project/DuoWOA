@@ -2,6 +2,8 @@
     import { InfoBar } from "fluent-svelte";
 </script>
 
+![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/170788230-a42e624a-d2ed-4070-b289-a9b34774bcd0.png)
+
 # Files/Tools Needed 📃
 
 - TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/installwindows/Files/surfaceduo1-twrp.img)
@@ -23,14 +25,28 @@
 </InfoBar>
 
 <InfoBar title="Important" severity="caution" closable="false">
-  <li>**THIS WILL WIPE ALL YOUR WINDOWS DATA**</li>
+  <li>**THIS WILL WIPE ALL YOUR ANDROID™ DATA**</li>
   <li>We don't take any responsibility for any damage done to your phone. By following this guide, you agree to take full responsibility of your actions. We have done some testing,</li>
   <li>but this is **STILL IN PREVIEW** and things can go wrong.</li>
 </InfoBar>
 
 **PLEASE READ AND BE SURE TO UNDERSTAND THE ENTIRE GUIDE BEFORE STARTING**
 
+# What you will get 🛒
+
+You will end up with both Android™ and Windows on your Surface Duo. Android™ and Windows will both split the internal storage (64GB and 64GB or 128GB and 128GB).
+
+Android™ will boot normally, and you will have to use a PC to boot Windows when needed, unless you create a dual boot image (explained later).
+
 # Steps 🛠️
+
+# Unlocking the Bootloader
+
+If not already done, please first proceed with the [Unlocking the Bootloader](unlockingbootloader-surfaceduo1) guide for Surface Duo (1st Gen). Come back once you're done. If you already followed this guide, please skip the unlocking section.
+
+# Partitioning
+
+If not already done, please proceed with the [Partitioning](partitioning-surfaceduo1) guide for Surface Duo (1st Gen). Come back once you're done. If you already followed this guide, please instead follow the [Reinstall Windows](reinstallwindows-surfaceduo1) guide, not this one.
 
 # Getting to Mass Storage Mode
 
@@ -43,9 +59,7 @@ adb reboot bootloader
 ![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
 _Image of what you should see right now: Surface Duo in Bootloader mode_
 
-Now let's boot TWRP:
-
-## Booting to TWRP
+Start by booting TWRP:
 
 - Plug your phone to your PC, open a command prompt and start by typing the following text, but do not press enter just yet
 
@@ -67,9 +81,9 @@ fastboot boot
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/2e27f24c-5b12-476d-99d8-f11de5baa807)
 
-You will now boot to TWRP. Reminder that touch doesn't work on TWRP for now, so you'll have to work through your PC.
+You will now boot to TWRP. Touch will not be working and the device will say it is locked. This is completely normal.
 
-Once inside TWRP, touch will not be working and the device will say it is locked. This is completely normal.
+# Going to Mass Storage
 
 - Let's load the mass storage shell script in order to boot into Mass Storage from TWRP
 
@@ -82,9 +96,10 @@ adb shell "sh /sdcard/msc.sh"
 
 Surface Duo should now be in USB 3 SuperSpeed (or what the USB-IF currently calls it) Mass Storage Mode.
 
-# Formatting the existing Windows partition
+# Installing Windows
 
-- Mount the partitions you made when you first installed Windows and assign them some letters:
+- Make sure you are in Mass Storage Mode, that your Surface Duo is plugged into your PC
+- Mount the partitions you have created using diskpart and assign them some letters:
 
 ```batch
 ⚠️ THESE ARE NOT ALL COMMANDS. DISKPART COMMANDS VARY A LOT, SO THESE ARE SOME ROUGH INSTRUCTIONS.
@@ -96,8 +111,7 @@ IF ONE PARTITION IS ALREADY ASSIGNED, YOU ALSO DO NOT NEED TO ASSIGN IT AGAIN IF
 Find the Surface Duo Disk, and take note of the number.
 # select disk <number>
 # list partition
-You will be able to recognize the partitions you made the first time you installed Windows by their size.
-Take note of the ESP and WIN partition numbers.
+You will be able to recognize the partitions we made earlier by their size. take note of the ESP and WIN partition numbers.
 # select partition <esp-partition-number>
 # assign letter=<THE LETTER YOU WANT AS LONG AS IT IS NOT CURRENTLY IN USE IN FILE EXPLORER FOR ANOTHER DRIVE! (Example: X)>:
 # select partition <win-partition-number>
@@ -107,16 +121,8 @@ Take note of the ESP and WIN partition numbers.
 - You will have two partitions loaded, one is the ESP partition, and the other is the Win partition. Take note of the letters you've used.
 
 <InfoBar title="Warnings" severity="caution" closable="false">
-  <li>From now on we will assume X: is the Win partition and that Y: is the ESP partition for all the commands. You very very likely used other letters, or have to use other letters. Replace them correctly with what you previously picked or you will lose data on your PC.</li>
+<li>From now on we will assume X: is the Win partition and that Y: is the ESP partition for all the commands. You very very likely used other letters, or have to use other letters. Replace them correctly with what you previously picked or you will lose data on your PC.</li>
 </InfoBar>
-
-- Now open the file explorer, find the just-mounted Windows drive. BE CAREFUL! If you choose the wrong device, you WILL LOSE IMPORTANT DATA ON YOUR PC! Check that the letter is the same one you've assigned before. In our case, it's X:\.
-- Once you have made sure you have found the right partition, right click on it and select "Format".
-- Make sure the selected file system is NTFS, that "Quick Format" is checked, and leave the rest as it is, and press "Start".
-
-Now the Windows Partition on your Surface Duo should be empty. Let's go ahead and reinstall everything.
-
-# Installing Windows
 
 - We will need our install.wim file now. If you haven't it already, you can [use this guide](https://woa-project.github.io/DuoWOA/docs/installwindows/ISO/GetWindows). When you are ready, run these commands:
 
@@ -129,7 +135,6 @@ This will take a bit of time. Go make some coffee ☕ or some tea 🍵.
 - Once that is done:
 
 ```batch
-rmdir /Q /S Y:\EFI
 bcdboot X:\Windows /s Y: /f UEFI
 ```
 
@@ -158,11 +163,37 @@ Note: Here's a table of what to download if you're a bit lost:
 
 Congratulations, you just installed your drivers!
 
-- You can now reboot your phone using ```adb reboot bootloader```.
+- You can now reboot your phone using ```adb reboot bootloader```. You will be able to boot to Android™ and your phone will work normally. Set it up if you need it.
+
+You will be back into Surface Duo's bootloader.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
 
 # Boot Windows 🚀
 
-We are ready to boot!
+We are ready to boot for the first time!
+
+Reboot your device to the Bootloader mode, using adb or from the recovery.
+
+![Surface Duo in Bootloader mode](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/eb19d500-4849-4ded-bd0c-894e4ac56486)
+_Image of what you should see right now: Surface Duo in Bootloader mode_
+
+Let's boot the UEFI, from a command prompt:
+
+```batch
+fastboot boot uefi.img
+```
+
+This step above will be needed every time you will want to boot Windows and needs to be done from the Bootloader mode.
+
+If you did everything right, Windows will now boot! Enjoy!
+
+**Note:** If the Touch keyboard won't show up in OOBE, touch somewhere else (to let the text box loose focus) and then touch into the text box again. As an alternative, you can use the On-Screen Keyboard.
+
+Let Windows set itself up, and come back once you're on the Windows Desktop on your Surface Duo
+
+# Boot Windows again after initial installation
 
 You'll have two methods of booting Windows.
 

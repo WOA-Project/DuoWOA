@@ -4,12 +4,12 @@
 
 # Files/Tools Needed 📃
 
-- TWRP image: [surfaceduo1-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/installwindows/Files/surfaceduo1-twrp.img)
+- TWRP image: [surfaceduo2-twrp.img](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/installwindows/Files/surfaceduo2-twrp.img)
 - Mass Storage Shell Script: [msc.tar](https://github.com/WOA-Project/SurfaceDuo-Guides/raw/main/installwindows/Files/msc.tar)
-- Windows UEFI: [Surface.Duo.1st.Gen.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
+- Windows UEFI: [Surface.Duo.2.UEFI.Fast.Boot.zip/uefi.img](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
 - [Platform Tools from Google (ADB and Fastboot)](https://developer.android.com/studio/releases/platform-tools)
 - An ARM64 Windows build of your choice that meets the minimum system requirements (specifically the install.wim file). You can use [UUPMediaCreator](https://github.com/gus33000/UUPMediaCreator) for this. [Here's a guide on how to use it.](https://woa-project.github.io/DuoWOA/docs/installwindows/ISO/GetWindows)
-- The driver set: [SurfaceDuo-Drivers-2XXX.XX-Desktop-Epsilon.zip](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
+- The driver set: [SurfaceDuo-Drivers-2XXX.XX-Desktop-Zeta.zip](https://github.com/WOA-Project/SurfaceDuo-Releases/releases/latest)
 - A Windows PC to build the Windows ISO, apply it onto the phone from mass storage, add drivers to the installation, configure ESP
 
 <InfoBar title="Warnings" severity="caution" closable="false">
@@ -19,7 +19,7 @@
   <li>- Do not run all commands at once.</li>
   <li>- Do not commit *any* typo with *any* commands.</li>
   <li>- Be familiar with command line interfaces.</li>
-  <li>- When using TWRP, it is normal and expected for the phone to be detected as a Xiaomi phone and for touch to not work.</li>
+  <li>- When using TWRP, it is normal and expected for the phone to be detected as an Asus phone and for touch to not work.</li>
 </InfoBar>
 
 <InfoBar title="Important" severity="caution" closable="false">
@@ -55,7 +55,7 @@ fastboot boot
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/24c5ed51-4710-449d-a5dc-686f8da8ea47)
 
-- Go find the surfaceduo1-twrp.img file you downloaded earlier, right click it, click "Copy as path"
+- Go find the surfaceduo2-twrp.img file you downloaded earlier, right click it, click "Copy as path"
 
 ![image](https://github.com/WOA-Project/SurfaceDuo-Guides/assets/3755345/3e8db3d5-44d0-4e6c-a7ef-674f86e82650)
 

@@ -1,24 +1,57 @@
-Guides for Surface Duo.
+<script lang="ts">
+    import { InfoBar } from "fluent-svelte";
+</script>
 
-<img alt="Surface Duo Dual Screen Windows" src="https://user-images.githubusercontent.com/3755345/197420866-d3bb0534-c848-4cc2-a242-04dae48b0f6e.png" width="90%" />
+Guides for running Windows on Surface Duo.
 
-- [Install Windows](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows.md)
-- [Install Windows 10X (Surface Duo 1 Only)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Install10X/SurfaceDuo1.md)
+![Surface Duo Dual Screen Windows](https://user-images.githubusercontent.com/3755345/197420866-d3bb0534-c848-4cc2-a242-04dae48b0f6e.png)
 
-Additional Guides:
+# A few notes
 
-- [Create a Windows ISO with UUPMediaCreator](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/CreateWindowsISO.md)
+<InfoBar title="Note" severity="caution" closable="false">
+  <li>Welcome 🥰! Thanks for being interested in trying out this project. We thought the following notes may interest you first before proceeding further:</li>
+  <li>ℹ️ We recommend you try this on a Surface Duo (1st Gen) device. While Surface Duo 2 is supported, it currently is in a proof of concept stage, with the experience of using Windows on it being worse in _every single metric_ (including performance) and way less hardware working, and super slow speeds compared to Surface Duo (1st Gen)</li>
+  <li>ℹ️ We recommend you know what you're getting into here. You need to know a bit about command line interfaces, Windows technical aspects. We won't teach you how to port the OS yourself, we've done this for you, but this is not for beginners or common users either. Tech Savvy people only or technical people only please, or you'll regret it or commit mistakes!</li>
+  <li>ℹ️ We do not recommend you buy a Surface Duo device to try this on without fully understanding what you're getting into. We do not commit to future work or potential functionality, buy the device for what it can offer you today, not tomorrow, or you'll regret it. If you already own a Surface Duo and want to try it, feel free 🙂 But do not buy this with hopes of it replacing your laptop, buy a laptop instead 🙂 (Even if this is the long term goal for us)</li>
+</InfoBar>
+
+# Main Guides
+
+- [Install Windows](https://woa-project.github.io/DuoWOA/docs/InstallWindows)
+- [Install Windows 10X (Surface Duo (1st Gen) Only)](https://woa-project.github.io/DuoWOA/docs/Install10X/SurfaceDuo1)
+
+# Additional Guides:
+
+- [Create a Windows ISO with UUPMediaCreator](https://woa-project.github.io/DuoWOA/docs/installwindows/ISO/GetWindows)
 - [Activate Windows on your Surface Duo](https://support.microsoft.com/en-us/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227)
-- [Uninstall Windows and only keep Android™ (Surface Duo 1 only)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/Uninstall-SurfaceDuo1.md)
-- [Dual Boot between Android™ and Windows 11 without the need of another Computer](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/DualBoot-SurfaceDuo1.md)
-- [Reinstall Windows (Surface Duo 1 only for now)](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ReinstallWindows-SurfaceDuo1.md)
-- [Making Cellular work on Sim Unlocked AT&T Surface Duo 1 devices](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/InstallWindows/ATTCellular-SurfaceDuo1.md)
+- Uninstall Windows and only keep Android™:
+    - [Surface Duo (1st Gen)](https://woa-project.github.io/DuoWOA/docs/installwindows/Uninstall-SurfaceDuo1)
+    - [Surface Duo 2](https://woa-project.github.io/DuoWOA/docs/installwindows/Uninstall-SurfaceDuo2)
+- [Dual Boot between Android™ and Windows without the need of another Computer](https://woa-project.github.io/DuoWOA/docs/installwindows/DualBoot-SurfaceDuo)
+- Reinstall Windows:
+    - [Surface Duo (1st Gen)](https://woa-project.github.io/DuoWOA/docs/installwindows/Reinstallwindows-surfaceduo1)
+    - [Surface Duo 2](https://woa-project.github.io/DuoWOA/docs/installwindows/Reinstallwindows-surfaceduo2)
+- [Making Cellular work on Sim Unlocked AT&T Surface Duo (1st Gen) devices](https://woa-project.github.io/DuoWOA/docs/installwindows/ATTCellular-SurfaceDuo1)
 
-More:
+# More Resources:
 
-- [Frequently Asked Questions](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/FAQ.md)
-- [Current Status of the Windows Port](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Status.md)
-- [Restore the Microsoft Store on Windows](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/RestoreMicrosoftStore.md)
-- [Extract boot.img or other partitions](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Other/ExtractingPartitions.md)
+- [Frequently Asked Questions](https://woa-project.github.io/DuoWOA/docs/FAQ)
+- [Current Status of the Windows Port](https://woa-project.github.io/DuoWOA/docs/Status)
+- [Restore the Microsoft Store on Windows](https://woa-project.github.io/DuoWOA/docs/RestoreMicrosoftStore)
+- [Extract boot.img or other partitions](https://woa-project.github.io/DuoWOA/docs/Other/ExtractingPartitions)
+
+# Contact
 
 Please join [our Telegram group](https://t.me/duowoa) if you need any assistance!
+
+---
+
+_**© 2020-2024 The Duo WOA Authors**_
+
+_Snapdragon is a registered trademark of Qualcomm Incorporated. Microsoft, the Microsoft Corporate Logo, Windows, Surface, Surface Duo, Windows Hello, Continuum, Hyper-V, and DirectX are registered trademarks of Microsoft Corporation in the United States. Android is a registered trademark of Google LLC. Miracast is a registered trademark of the Wi-Fi Alliance. Other binaries may be copyright Qualcomm Incorporated and Microsoft Surface._
+
+_**Limited emergency calling**_
+
+_Running Windows on your Surface Duo is not a replacement for a proper phone operating system and does not have emergency calling capabilities._
+
+_**Hello from Seattle (US), France, Italy.**_
